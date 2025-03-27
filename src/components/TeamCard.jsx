@@ -1,4 +1,5 @@
 import {FourthButton, LinkButton, ThirdButton} from "./Button.jsx";
+import {openLink} from "../utils/util.js";
 
 export const TeamCard = ({image,name,role,description,twitter,linkedin,dribble}) => {
     return(

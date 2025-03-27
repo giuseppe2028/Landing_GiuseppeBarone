@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
-export const PrimaryButton = ({ onClick, text, icon, altText = "Icona del pulsante" }) => {
+export const PrimaryButton = ({ onClick, text, icon, altText = "Icona del pulsante", iconPosition = "right" }) => {
     return (
         <button
-            className="rounded-[20px] px-[50px] py-[16px] bg-backgroundButtonPrimary text-textButtonPrimary flex items-center gap-[8px] font-poppins font-semibold
-                      flex-row-reverse lg:flex-row"
+            className={`rounded-[20px] px-[50px] py-[16px] bg-backgroundButtonPrimary text-textButtonPrimary flex items-center gap-[8px] font-poppins font-semibold ${
+                iconPosition === "left" ? "flex-row" : "flex-row-reverse lg:flex-row"
+            }`}
             onClick={onClick}
         >
             {icon && <img src={icon} alt={altText} className="w-6 h-6 inline-block" />}
@@ -11,7 +12,6 @@ export const PrimaryButton = ({ onClick, text, icon, altText = "Icona del pulsan
         </button>
     );
 };
-
 PrimaryButton.propTypes = {
     onClick: PropTypes.func,
     text:PropTypes.string.isRequired,
@@ -22,7 +22,7 @@ PrimaryButton.propTypes = {
 export const SecondaryButton = ({ onClick,text}) => {
     return (
         <button
-            className="rounded-[20px] gap-[8px] px-[50px] py-[16px] bg-backgroundButtonSecondary text-textButtonSecondary font-poppins font-semibold text-tiny"
+            className="h-[60px] rounded-[20px] gap-[8px] px-[50px] py-[16px] bg-backgroundButtonSecondary text-textButtonSecondary font-poppins font-semibold text-tiny"
             onClick={onClick}
         >
             {text}
@@ -39,7 +39,7 @@ SecondaryButton.propTypes = {
 export const ThirdButton = ({ onClick,text}) => {
     return (
         <button
-            className="rounded-[20px] px-[50px] py-[16px] text-textButtonSecondary font-poppins font-semibold gap-[8px] text-tiny"
+            className="h-[60px] rounded-[20px] px-[50px] py-[16px] text-textButtonSecondary font-poppins font-semibold gap-[8px] text-tiny"
             onClick={onClick}
         >
           {text}
@@ -55,7 +55,7 @@ ThirdButton.propTypes = {
 export const FourthButton = ({ onClick,text}) => {
     return (
         <button
-            className="rounded-[20px] px-[50px] py-[16px] text-textButtonSecondary bg-white border-backgroundButtonPrimary border-1 font-poppins font-semibold text-tiny"
+            className="h-[60px] rounded-[20px] px-[50px] py-[16px] text-textButtonSecondary bg-white border-backgroundButtonPrimary border-1 font-poppins font-semibold text-tiny"
             onClick={onClick}
         >
            {text}
@@ -74,7 +74,7 @@ export const LinkButton = ({ onClick, text }) => {
     return (
         <button
             onClick={onClick}
-            className="font-poppins font-bold text-backgroundButtonPrimary">
+            className="h-[60px] font-poppins font-bold text-backgroundButtonPrimary">
             {text}
         </button>
     );
