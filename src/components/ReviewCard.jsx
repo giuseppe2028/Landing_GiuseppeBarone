@@ -1,11 +1,13 @@
+import {TextMedium} from "./Text.jsx";
+
 export const ReviewCard = ({ image, name, role, review, reviewRating }) => {
     const stars = Array.from({ length: reviewRating }, (_, index) => index);
 
     return (
-        <div className="grid grid-cols-2 bg-white rounded-[20px] p-[40px] border border-backgroundButtonSecondary">
-            <div>
-                <div><img src={image} alt="reviewer" className="w-16 h-16 rounded-full" /></div>
-                <div className="font-bold text-medium">{name}</div>
+        <div className="flex gap-x-[30px] bg-white rounded-[20px] p-[40px] border border-backgroundButtonSecondary">
+            <div className="flex flex-col gap-y-[16px] justify-center">
+                <img width="120px" height="120px" src={image} alt="reviewer" className="rounded-full" />
+                <TextMedium text={name}/>
                 <div className="text-gray-500">{role}</div>
             </div>
 
