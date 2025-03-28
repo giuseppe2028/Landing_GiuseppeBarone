@@ -9,9 +9,9 @@ export const CustomNavbar = () => {
             </div>
 
             <div className="hidden lg:flex lg:gap-[50px] gap-x-[20px]">
-                <ThirdButton text={buttonCostants.Contact} />
-                <SecondaryButton text={buttonCostants.Hiw} />
-                <PrimaryButton text={buttonCostants.GS} icon="/RocketLaunch.svg"/>
+                <ThirdButton text={buttonCostants.Contact} href="https://www.animaapp.com/?utm_source=figma-samples&utm_campaign=figma-lp-ui-kit&utm_medium=figma-samples" />
+                <SecondaryButton text={buttonCostants.Hiw} href="https://www.animaapp.com/?utm_source=figma-samples&utm_campaign=figma-lp-ui-kit&utm_medium=figma-samples"/>
+                <PrimaryButton text={buttonCostants.GS} icon="/RocketLaunch.svg" href="https://www.animaapp.com/?utm_source=figma-samples&utm_campaign=figma-lp-ui-kit&utm_medium=figma-samples"/>
             </div>
 
             <div className="lg:hidden">

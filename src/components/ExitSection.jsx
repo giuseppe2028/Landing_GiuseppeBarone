@@ -12,10 +12,10 @@ export const ExitSection = ()=>{
                     <TextLarge text={exitSectionCostant.title}/>
                     <TextMedium text={exitSectionCostant.subtitle}/>
                 </div>
-                <PrimaryButton text={buttonCostants.GS} icon="/RocketLaunch.svg" iconPosition="left"/>
+                <PrimaryButton href={"https://www.animaapp.com/?utm_source=figma-samples&utm_campaign=figma-lp-ui-kit&utm_medium=figma-samples"} text={buttonCostants.GS} icon="/RocketLaunch.svg" iconPosition="left"/>
             </div>
             <div className="flex flex-col items-end justify-end">
-                <img src="/Mockup-2.svg" className="w-[320px] h-[100px] lg:w-[1170px] lg:h-[220px]"/>
+                <img src="/Mockup-2.svg"/>
             </div>
         </div>
     );

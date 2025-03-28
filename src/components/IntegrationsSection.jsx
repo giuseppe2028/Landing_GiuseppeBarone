@@ -7,7 +7,7 @@ import {buttonCostants} from "../costants/CostantsComponents.js";
 export const IntegrationsSection = () => {
     return (
         <div className="bg-backgroundSecondary w-full h-screen flex flex-col items-center justify-center lg:px-[55px] px-[30px] lg:py-[120px] py-[60px] gap-y-[40px]">
-           <div className="flex flex-col justify-center items-center gap-y-[20px]">
+           <div className="flex flex-col justify-center items-center text-center gap-y-[20px]">
                <TextExtrabig text={integrationSectionCostants.title}/>
                <TextTiny text={integrationSectionCostants.subtitle}/>
            </div>
@@ -19,7 +19,7 @@ export const IntegrationsSection = () => {
                 <img height="64px" width="64px" src="/logos/Logo-5.svg"/>
                 <img height="64px" width="64px" src="/logos/Logo-6.svg"/>
             </div>
-            <PrimaryButton text={buttonCostants.VAI}/>
+            <PrimaryButton text={buttonCostants.VAI} href="https://www.animaapp.com/?utm_source=figma-samples&utm_campaign=figma-lp-ui-kit&utm_medium=figma-samples"/>
         </div>
     );
 }

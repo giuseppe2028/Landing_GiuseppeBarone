@@ -1,81 +1,82 @@
 import PropTypes from "prop-types";
-export const PrimaryButton = ({ onClick, text, icon, altText = "Icona del pulsante", iconPosition = "right" }) => {
+
+export const PrimaryButton = ({ href, text, icon, altText = "Icona del pulsante", iconPosition = "right" }) => {
     return (
-        <button
+        <a
+            href={href}
             className={`rounded-[20px] px-[50px] py-[16px] bg-backgroundButtonPrimary text-textButtonPrimary flex items-center gap-[8px] font-poppins font-semibold ${
                 iconPosition === "left" ? "flex-row" : "flex-row-reverse lg:flex-row"
             }`}
-            onClick={onClick}
         >
             {icon && <img src={icon} alt={altText} className="w-6 h-6 inline-block" />}
             <span className="text-tiny">{text}</span>
-        </button>
+        </a>
     );
 };
+
 PrimaryButton.propTypes = {
-    onClick: PropTypes.func,
-    text:PropTypes.string.isRequired,
-    icon:PropTypes.string
+    href: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+    icon: PropTypes.string
 };
 
-
-export const SecondaryButton = ({ onClick,text}) => {
+export const SecondaryButton = ({ href, text }) => {
     return (
-        <button
+        <a
+            href={href}
             className="h-[60px] rounded-[20px] gap-[8px] px-[50px] py-[16px] bg-backgroundButtonSecondary text-textButtonSecondary font-poppins font-semibold text-tiny"
-            onClick={onClick}
         >
             {text}
-        </button>
+        </a>
     );
 };
 
 SecondaryButton.propTypes = {
-    onClick: PropTypes.func,
-    text:PropTypes.string.isRequired
+    href: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired
 };
 
-
-export const ThirdButton = ({ onClick,text}) => {
+export const ThirdButton = ({ href, text }) => {
     return (
-        <button
+        <a
+            href={href}
             className="h-[60px] rounded-[20px] px-[50px] py-[16px] text-textButtonSecondary font-poppins font-semibold gap-[8px] text-tiny"
-            onClick={onClick}
         >
-          {text}
-        </button>
+            {text}
+        </a>
     );
 };
 
 ThirdButton.propTypes = {
-    onClick: PropTypes.func,
-    text:PropTypes.string.isRequired
+    href: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired
 };
 
-export const FourthButton = ({ onClick,text}) => {
+export const FourthButton = ({ href, text }) => {
     return (
-        <button
+        <a
+            href={href}
             className="h-[60px] rounded-[20px] px-[50px] py-[16px] text-textButtonSecondary bg-white border-backgroundButtonPrimary border-1 font-poppins font-semibold text-tiny"
-            onClick={onClick}
         >
-           {text}
-        </button>
+            {text}
+        </a>
     );
 };
 
 FourthButton.propTypes = {
-    onClick: PropTypes.func,
-    text:PropTypes.string.isRequired
+    href: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired
 };
 
-
-
-export const LinkButton = ({ onClick, text }) => {
+export const LinkButton = ({ href, text }) => {
     return (
-        <button
-            onClick={onClick}
-            className="h-[60px] font-poppins font-bold text-backgroundButtonPrimary">
+        <a href={href} className="h-[60px] font-poppins font-bold text-backgroundButtonPrimary">
             {text}
-        </button>
+        </a>
     );
+};
+
+LinkButton.propTypes = {
+    href: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired
 };
