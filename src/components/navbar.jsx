@@ -15,7 +15,7 @@ export const CustomNavbar = () => {
             </div>
 
             <div className="lg:hidden">
-                <PrimaryButton text="Get Started" icon="/ArrowLeft.svg"/>
+                <PrimaryButton text="Get Started" icon="/ArrowLeft.svg" href="https://www.animaapp.com/?utm_source=figma-samples&utm_campaign=figma-lp-ui-kit&utm_medium=figma-samples"/>
             </div>
         </nav>
     );

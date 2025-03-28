@@ -17,8 +17,8 @@ export const PresentationSection = () => {
                     <p className="px-0 mx-0 font-mulish font-normal text-medium leading-[150%] tracking-[0%]" dangerouslySetInnerHTML={{__html:formattedText}}/>
                 </div>
                 <div className="flex gap-[18px] mt-4 lg:flex-row justify-center items-center flex-col">
-                    <PrimaryButton text={buttonCostants.GS} icon="/RocketLaunch.svg" iconPosition="left"/>
-                    <FourthButton text={buttonCostants.Hiw}/>
+                    <PrimaryButton href="https://www.animaapp.com/?utm_source=figma-samples&utm_campaign=figma-lp-ui-kit&utm_medium=figma-samples" text={buttonCostants.GS} icon="/RocketLaunch.svg" iconPosition="left"/>
+                    <FourthButton href="https://www.animaapp.com/?utm_source=figma-samples&utm_campaign=figma-lp-ui-kit&utm_medium=figma-samples" text={buttonCostants.Hiw}/>
                 </div>
             </div>
 
